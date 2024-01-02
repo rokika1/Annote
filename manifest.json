@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Annote",
+    "version": "1.0.0",
+    "description": "To highlight, underline, and bold webpage content and automatically summarise into a recoverable document.",
+    "author": ["Ashley Luong", "Rokika Khondaker"],
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+          "128": "images/logo.jpg"
+        }
+    },
+    "icons": {
+        "128": "images/logo.jpg"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "css": ["styles.css"]
+        }
+    ]
+}
