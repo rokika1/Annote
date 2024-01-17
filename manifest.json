@@ -26,10 +26,6 @@
             "css": ["styles.css"]
         }
     ],
-    "content_security_policy": {
-        "script-src": "'self' 'sha256-rqq7t2w3tjlx9t79KTEsda1J8z59G8nOVUYP1ZySvZ4=' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest",
-        "object-src": "'self'" 
-    },
     "background": {
         "service_worker": "background.js"
     }
