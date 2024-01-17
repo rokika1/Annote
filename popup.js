@@ -58,7 +58,7 @@ function signedInUI() {
 function signedOutUI() {
     document.getElementById('signInButton').style.display = 'block';
     document.getElementById('signOutButton').style.display = 'none';
-    document.getElementById('greeting').innerText = 'Hi, Please sign in!';
+    document.getElementById('greeting').innerText = 'Hi, please sign in!';
     document.getElementById('homeButton').style.display = 'none';
     document.getElementById('save').style.display = 'none';
 }
