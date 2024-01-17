@@ -1,7 +1,19 @@
 <!DOCTYPE html>
-
-<h1>Annote</h1>
-<h2>Summary</h2>
-<button id="save">Save</button>
-
+<html>
+<head>
+    <title>Annote</title>
+</head>
+<body>
+    <h1>Annote</h1>
+    <p id="greeting"> Hi! </p>
+    <button id="signInButton" style="display:none;">Sign in</button>
+    <button id="signOutButton" style="display:none;">Sign out</button>
+    <button id="homeButton" style="display:none;">Home</button>
+    <h2>Summary</h2>
+    <button id="save" style="display:none;">Save</button>
+    <script src="popup.js"></script>
+    <script nonce="database">
+        const supabase = supabase.createClient('https://xfkumzuscbeknfyjjexu.supabase.co', process.env.SUPABASE_KEY); 
+    </script>
+</body>
 </html>

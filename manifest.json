@@ -4,7 +4,11 @@
     "version": "1.0.0",
     "description": "To highlight, underline, and bold webpage content and automatically summarise into a recoverable document.",
     "author": ["Ashley Luong", "Rokika Khondaker"],
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["identity", "activeTab", "scripting"],
+    "oauth2": {
+      "client_id": "525396072905-m17ojlu3nt4l6b5kbn0sbivpgj00m6lo.apps.googleusercontent.com",
+      "scopes": ["openid", "email", "profile"]
+    },
     "host_permissions": ["<all_urls>"],
     "action": {
         "default_popup": "popup.html",
@@ -21,5 +25,12 @@
             "js": ["content.js"],
             "css": ["styles.css"]
         }
-    ]
+    ],
+    "content_security_policy": {
+        "script-src": "'self' 'sha256-rqq7t2w3tjlx9t79KTEsda1J8z59G8nOVUYP1ZySvZ4=' https://cdn.jsdelivr.net/npm/@supabase/supabase-js@latest",
+        "object-src": "'self'" 
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
 }
